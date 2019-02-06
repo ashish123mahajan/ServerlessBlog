@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+
+<body>First method<br>
+    <span id="output"></span><br>
+    <div>Second method
+        <iframe src="blogs/test.txt" frameborder="0" height="200" width="95%"></iframe>
+    </div>
+    Third Method
+    <div>
+    <object data="blogs/test.txt" width="50%" height="300">
+        Not supported
+    </object>
+    </div>
+</body>
+
+<script src="js/main.js"></script>
+<script>
+    readTextFile("blogs/test.txt");
+</script>
+
+</html>
