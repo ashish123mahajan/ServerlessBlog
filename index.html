@@ -3,7 +3,11 @@
 <head>
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
     <script type="text/javascript">
-        $(document).ready(function () {            
+    function loadDataInIframe(str){
+        $("#ifrm").html("<iframe src='blogs/"+str+"'></iframe>");
+            } 
+        $(document).ready(function () { 
+                    
                 $.ajax({
                     url: "data/blog.json",
                     dataType: "text",
@@ -14,7 +18,7 @@
                         blogs=data["configuration"]["blogs"];
                         links="<ol>"
                         for(var i=0;i<blogs.length;i++){
-                            links += "<li><a href='/ServerlessBlog/blogs/"+blogs[i]["Pagename"]+"'>"+blogs[i]["Pagename"]+"</a></li>"
+                            links += "<li><a onclick = loadDataInIframe('"+blogs[i]["Pagename"]+"') >"+blogs[i]["Pagename"]+"</a></li>"
                         }
                         links+="</ol>";
                         $("#nav").html(links);
@@ -26,6 +30,10 @@
 
 <body>
     <div id="nav">
+
+    </div>
+    
+    <div id="ifrm">
 
     </div>
 </body>
