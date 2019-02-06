@@ -1,47 +1,21 @@
-[
-	"Title":"Website Title",
-   "HomePage":"mainpage.html",
-   "NavBar":[
-      {
-         "text":"some text for link",
-         "link":"routing  link"
-      },
-      {
-         "text":"some text for link",
-         "link":"routing  link"
-      },
-      {
-         "text":"some text for link",
-         "link":"routing  link"
-      },
-      {
-         "text":"some text for link",
-         "link":"routing  link"
-      },
-      {
-         "text":"some text for link",
-         "link":"routing  link"
-      }
-   ]   "blogs":[
-      {
-         "Pagename":"myfirstPage.html",
-         "path":" "
-      },
-      {
-         "Pagename":"myfirstPage.html",
-         "path":" "
-      },
-      {
-         "Pagename":"myfirstPage.html",
-         "path":" "
-      },
-      {
-         "Pagename":"myfirstPage.html",
-         "path":" "
-      },
-      {
-         "Pagename":"myfirstPage.html",
-         "path":" "
-      }
-   ]
-]
+{
+   "configuration": {
+     "HomePage": {
+       "name": "somehomepage.html"
+     },
+     "blogs": [
+       {
+         "Pagename": "firstPage.html"
+       },
+       {
+         "Pagename": "secondPage.html"
+       },
+       {
+         "Pagename": "thirdPage.html"
+       },
+       {
+         "Pagename": "jenkins.html"
+       }
+     ]
+   }
+ }

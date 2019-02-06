@@ -5,43 +5,29 @@
     <script type="text/javascript">
         $(document).ready(function () {            
                 $.ajax({
-                    url: "blogs/test.txt",
+                    url: "data/blog.json",
                     dataType: "text",
-                    success: function (data) {                 
-                            // var text = $('#newCheckText').val();
-                            // var str = data;
-                            // var str_array = str.split('\n');
-                            // for (var i = 0; i < str_array.length; i++) {
-                            //     // Trim the excess whitespace.
-                            //     str_array[i] = str_array[i].replace(/^\s*/, "").replace(/\s*$/, "");
-                            //     // Add additional code here, such as:
-                            //     alert(str_array[i]);
-                                $('#checkboxes').text(data);
-                            //}
+                    success: function (response) {                 
+                        data=JSON.parse(response);
+                        var links="";
+                        console.log();
+                        blogs=data["configuration"]["blogs"];
+                        links="<ol>"
+                        for(var i=0;i<blogs.length;i++){
+                            links += "<li><a href='/ServerlessBlog/blogs/"+blogs[i]["Pagename"]+"'>"+blogs[i]["Pagename"]+"</a></li>"
+                        }
+                        links+="</ol>";
+                        $("#nav").html(links);
                     }                   
                 });
         });
     </script>
 </head>
 
-<body>First method<br>
-    <span id="output"></span><br>
-    <div>Second method
-        <iframe src="blogs/test.txt" frameborder="0" height="200" width="95%"></iframe>
-    </div>
-    Third Method
-    <div>
-    <object data="blogs/test.txt" width="50%" height="300">
-        Not supported
-    </object>
-    </div>
-    Four Method
-    <div id="checkboxes"></div>
-</body>
+<body>
+    <div id="nav">
 
-<script src="js/main.js"></script>
-<script>
-    readTextFile("blogs/test.txt");
-</script>
+    </div>
+</body>
 
 </html>
