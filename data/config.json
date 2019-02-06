@@ -1,0 +1,18 @@
+{
+   "configuration": {
+     "HomePage": {
+       "name": "somehomepage.html"
+     },
+     "blogs": [
+       {
+         "Pagename": "firstPage.html"
+       },
+       {
+         "Pagename": "secondPage.html"
+       },
+       {
+         "Pagename": "thirdPage.html"
+       }
+     ]
+   }
+ }
