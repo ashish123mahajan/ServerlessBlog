@@ -2,6 +2,26 @@
 <html>
 <head>
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {            
+                $.ajax({
+                    url: "blogs/test.txt",
+                    dataType: "text",
+                    success: function (data) {                 
+                            // var text = $('#newCheckText').val();
+                            // var str = data;
+                            // var str_array = str.split('\n');
+                            // for (var i = 0; i < str_array.length; i++) {
+                            //     // Trim the excess whitespace.
+                            //     str_array[i] = str_array[i].replace(/^\s*/, "").replace(/\s*$/, "");
+                            //     // Add additional code here, such as:
+                            //     alert(str_array[i]);
+                                $('#checkboxes').text(data);
+                            //}
+                    }                   
+                });
+        });
+    </script>
 </head>
 
 <body>First method<br>
@@ -15,6 +35,8 @@
         Not supported
     </object>
     </div>
+    Four Method
+    <div id="checkboxes"></div>
 </body>
 
 <script src="js/main.js"></script>
